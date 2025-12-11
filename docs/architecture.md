@@ -51,7 +51,7 @@ This marketplace follows industry best practices with a focus on granularity, co
 **85 Specialized Agents**
 - Domain experts with deep knowledge
 - Organized across architecture, languages, infrastructure, quality, data/AI, documentation, business, and SEO
-- Model-optimized (47 Haiku, 97 Sonnet) for performance and cost
+- Model-optimized (Opus for complex reasoning, Haiku for fast execution) for quality and performance
 
 **15 Workflow Orchestrators**
 - Multi-agent coordination systems
@@ -187,52 +187,56 @@ See [Agent Skills](./agent-skills.md) for complete details on the 47 skills.
 
 ## Model Configuration Strategy
 
-### Two-Tier Architecture
+### Three-Tier Architecture
 
-The system uses Claude Opus and Sonnet models strategically:
+The system uses Claude Opus, Sonnet, and Haiku models strategically:
 
 | Model | Count | Use Case |
 |-------|-------|----------|
-| Haiku | 47 agents | Fast execution, deterministic tasks |
-| Sonnet | 97 agents | Complex reasoning, architecture decisions |
+| Opus | ~60 agents | Complex reasoning, architecture, language expertise, security |
+| Sonnet | ~10 agents | Balanced performance for specialized tasks |
+| Haiku | ~30 agents | Fast execution, deterministic tasks |
 
 ### Selection Criteria
 
-**Haiku - Fast Execution & Deterministic Tasks**
-- Generating code from well-defined specifications
-- Creating tests following established patterns
-- Writing documentation with clear templates
-- Executing infrastructure operations
-- Performing database query optimization
-- Handling customer support responses
-- Processing SEO optimization tasks
-- Managing deployment pipelines
-
-**Sonnet - Complex Reasoning & Architecture**
-- Designing system architecture
-- Making technology selection decisions
-- Performing security audits
-- Reviewing code for architectural patterns
+**Opus - Complex Reasoning & Architecture**
+- Designing system architecture and technology selection
+- Providing programming language expertise (all language-pro agents)
+- Performing security audits and code reviews
 - Creating complex AI/ML pipelines
-- Providing language-specific expertise
+- Handling business-critical analysis (financial, legal, HR)
 - Orchestrating multi-agent workflows
-- Handling business-critical legal/HR matters
+- Building frontend/mobile applications with modern patterns
+
+**Sonnet - Balanced Performance**
+- Tasks requiring good reasoning with moderate latency
+- Specialized domain tasks not requiring maximum capability
+- Balanced cost-performance scenarios
+
+**Haiku - Fast Execution & Deterministic Tasks**
+- Generating documentation from templates
+- Executing infrastructure operations and deployments
+- Performing database query optimization
+- Handling SEO optimization tasks (meta tags, keywords)
+- Managing deployment pipelines
+- Quick debugging and error detection
+- Customer support responses
 
 ### Hybrid Orchestration
 
-Combine models for optimal performance and cost:
+Combine models for optimal quality and performance:
 
 ```
-Planning Phase (Sonnet) → Execution Phase (Haiku) → Review Phase (Sonnet)
+Planning Phase (Opus) → Execution Phase (Haiku) → Review Phase (Opus)
 
 Example:
-backend-architect (Sonnet) designs API
+backend-architect (Opus) designs API
   ↓
-Generate endpoints (Haiku) implements spec
+Generate endpoints (Opus) implements with best practices
   ↓
 test-automator (Haiku) creates tests
   ↓
-code-reviewer (Sonnet) validates architecture
+code-reviewer (Opus) validates architecture
 ```
 
 ## Performance & Quality
