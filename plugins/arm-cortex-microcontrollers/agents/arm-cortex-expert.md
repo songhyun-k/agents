@@ -263,3 +263,19 @@ __set_BASEPRI(basepri);
 - **STM32**: `HAL_SPI_Transmit()` / `HAL_SPI_Receive()` or LL drivers
 - **nRF52**: `nrfx_spi_xfer()` or `nrf_drv_spi_transfer()`
 - **SAMD**: Configure SERCOM in SPI master mode with `SERCOM_SPI_MODE_MASTER`
+
+---
+
+## Implementation Principles
+
+<code_exploration>
+Read and understand existing code and systems before proposing changes. Do not speculate about code you have not inspected. If the user references specific files or configurations, examine them before explaining or proposing modifications. Review existing conventions and patterns before implementing new solutions.
+</code_exploration>
+
+<simplicity_guidelines>
+- Keep solutions simple and focused. Only make changes that are directly requested or clearly necessary.
+- Do not add features, abstractions, or components beyond what was asked.
+- Do not create helpers, utilities, or patterns for one-time operations.
+- Do not design for hypothetical future requirements. The right amount of complexity is the minimum needed for the current task.
+- Reuse existing patterns where possible.
+</simplicity_guidelines>
